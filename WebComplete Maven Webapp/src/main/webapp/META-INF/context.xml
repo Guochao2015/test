@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>      
+        
+    <!-- Development JNDI Setting
+	<Resource name="jdbc/CRSeMag" auth="Container" type="javax.sql.DataSource"
+		username="CRSeMag" password="crs"
+		driverClassName="oracle.jdbc.driver.OracleDriver"
+		url="jdbc:oracle:thin:@192.168.0.18:1521:orcl"
+		maxActive="8" maxIdle="4" maxWait="10000"
+		removeAbandoned="true" removeAbandonedTimeout="60" logAbandoned="true"
+		/> 
+		 -->
+		 <!-- Container Application  --> 
+		  <Resource name="jdbc/CRSeMag" auth="Container" type="javax.sql.DataSource"
+		username="CRSTEST" password="crs"
+		driverClassName="oracle.jdbc.driver.OracleDriver"
+		url="jdbc:oracle:thin:@192.168.1.18:1521:orcl"
+		maxActive="8" maxIdle="4" maxWait="10000"
+		removeAbandoned="true" removeAbandonedTimeout="60" logAbandoned="true"
+		/>  
+</Context>
