@@ -9,21 +9,34 @@
   <url>http://maven.apache.org</url>
   <properties>
 	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	<spring.version>4.1.6.RELEASE</spring.version>
+	<dom4j.version>1.6.1</dom4j.version>
+	<mybatis.version>3.0.6</mybatis.version>
+	<mybatis.spring.version>1.2.2</mybatis.spring.version>
+	<httpclient.version>4.5.2</httpclient.version>
+	<fileupload.version>1.3.1</fileupload.version>
+	<io.version>2.4</io.version>
+	<freemarker.version>2.3.23</freemarker.version>
+	<slf4j.version>1.7.7</slf4j.version>
+	<log4j.version>1.2.17</log4j.version>
+	<mysql.version>6.0.6</mysql.version>
+	<jedis.version>2.9.0</jedis.version>
+	<pool.version>2.4.2</pool.version>
+	<druid.version>1.0.29</druid.version>
+	<mongodb.version>3.4.2</mongodb.version>
+	<jackson.version>1.9.13</jackson.version>
+	<quartz.version>2.2.1</quartz.version>
+	<dubbo.version>2.5.3</dubbo.version>
+	<hibernate.validator.version>5.1.3.Final</hibernate.validator.version>
   </properties>
   
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.12</version>
       <scope>test</scope>
     </dependency>
-        <dependency>
-    	<groupId>mysql</groupId>
-    	<artifactId>mysql-connector-java</artifactId>
-    	<version>5.1.36</version>
-    </dependency>
-    
     <dependency>
 		<groupId>javax.servlet</groupId>
 		<artifactId>javax.servlet-api</artifactId>
@@ -34,68 +47,165 @@
     <dependency>
     	<groupId>dom4j</groupId>
 	    <artifactId>dom4j</artifactId>
-	    <version>1.6.1</version>
+	    <version>${dom4j.version}</version>
     </dependency>
     <dependency>
     	<groupId>org.mybatis</groupId>
     	<artifactId>mybatis</artifactId>
-    	<version>3.0.6</version>
+    	<version>${mybatis.version}</version>
     </dependency>
     
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-beans</artifactId>
-      <version>4.1.6.RELEASE</version>
+      <version>${spring.version}</version>
     </dependency>
     
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
-      <version>4.1.6.RELEASE</version>
+      <version>${spring.version}</version>
     </dependency>
     
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
-      <version>4.1.6.RELEASE</version>
+      <version>${spring.version}</version>
     </dependency>
     
     <dependency>
     	<groupId>org.springframework</groupId>
     	<artifactId>spring-web</artifactId>
-    	<version>4.1.6.RELEASE</version>
+    	<version>${spring.version}</version>
     </dependency>
     
     <dependency>
     	<groupId>org.springframework</groupId>
 		<artifactId>spring-webmvc</artifactId>
-		<version>4.1.6.RELEASE</version>
+		<version>${spring.version}</version>
     </dependency>
     <dependency>
     	<groupId>org.springframework</groupId>
     	<artifactId>spring-jdbc</artifactId>
-    	<version>4.1.6.RELEASE</version>
+    	<version>${spring.version}</version>
     </dependency>
     <dependency>
     	<groupId>org.springframework</groupId>
     	<artifactId>spring-aop</artifactId>
-    	<version>4.1.6.RELEASE</version>
+    	<version>${spring.version}</version>
     </dependency>
     <dependency>
     	<groupId>org.springframework</groupId>
     	<artifactId>spring-tx</artifactId>
-    	<version>4.1.6.RELEASE</version>
+    	<version>${spring.version}</version>
     </dependency>
     <dependency>
     	<groupId>org.springframework</groupId>
     	<artifactId>spring-orm</artifactId>
-    	<version>4.1.6.RELEASE</version>
+    	<version>${spring.version}</version>
     </dependency>
     <dependency>
     	<groupId>org.mybatis</groupId>
     	<artifactId>mybatis-spring</artifactId>
-    	<version>1.2.2</version>
+    	<version>${mybatis.spring.version}</version>
     </dependency>
+    
+    <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+	<dependency>
+	    <groupId>org.apache.httpcomponents</groupId>
+	    <artifactId>httpclient</artifactId>
+	    <version>${httpclient.version}</version>
+	</dependency>
+	<!-- 上传组件 -->
+	<dependency>
+		<groupId>commons-fileupload</groupId>
+		<artifactId>commons-fileupload</artifactId>
+		<version>${fileupload.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>commons-io</groupId>
+		<artifactId>commons-io</artifactId>
+		<version>${io.version}</version>
+	</dependency>
+    <!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
+    <!-- 模版 -->
+	<dependency>
+	    <groupId>org.freemarker</groupId>
+	    <artifactId>freemarker</artifactId>
+	    <version>${freemarker.version}</version>
+	</dependency>
+	<!-- log -->
+    <dependency>
+		<groupId>log4j</groupId>
+		<artifactId>log4j</artifactId>
+		<version>${log4j.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-api</artifactId>
+		<version>${slf4j.version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-log4j12</artifactId>
+		<version>${slf4j.version}</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+	<!-- 驱动 -->
+	<dependency>
+	    <groupId>mysql</groupId>
+	    <artifactId>mysql-connector-java</artifactId>
+	    <version>${mysql.version}</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
+	<dependency>
+	    <groupId>redis.clients</groupId>
+	    <artifactId>jedis</artifactId>
+	    <version>${jedis.version}</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
+	<dependency>
+	    <groupId>org.mongodb</groupId>
+	    <artifactId>mongo-java-driver</artifactId>
+	    <version>${mongodb.version}</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-pool2 -->
+	<dependency>
+	    <groupId>org.apache.commons</groupId>
+	    <artifactId>commons-pool2</artifactId>
+	    <version>${pool.version}</version>
+	</dependency>
+			<!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
+	<dependency>
+	    <groupId>com.alibaba</groupId>
+	    <artifactId>druid</artifactId>
+	    <version>${druid.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.codehaus.jackson</groupId>
+		<artifactId>jackson-mapper-asl</artifactId>
+		<version>${jackson.version}</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.quartz-scheduler/quartz -->
+	<dependency>
+	    <groupId>org.quartz-scheduler</groupId>
+	    <artifactId>quartz</artifactId>
+	    <version>${quartz.version}</version>
+	</dependency>
+			<!-- https://mvnrepository.com/artifact/com.alibaba/dubbo -->
+	<dependency>
+	    <groupId>com.alibaba</groupId>
+	    <artifactId>dubbo</artifactId>
+	    <version>${dubbo.version}</version>
+	</dependency>
+	<!-- 验证框架 -->
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-validator</artifactId>
+		<version>${hibernate.validator.version}</version>
+	</dependency>
   </dependencies>
   <build>
     <finalName>WebComplete</finalName>
